@@ -4,7 +4,7 @@ I understand the organization here is still a mess. I firstly wanted to get it t
 
 _Usage:_
 
-Each tool is laid within an example project folder, so as to illustrate how it can be used. So, one could simply align his/her project folder accordingly and use the script (or modify script accordingly). 
+Considering a typical project layout, the tools are placed in tools folder, and access the relevant `docs` or `src` example contents, to generate demo outputs, again within tools folder itself. This way, user could replace doc content in `docs` folder with theirs, src content in `src` folder with theirs, and proceed using the tools. 
 
 
 ##### md2pdf
