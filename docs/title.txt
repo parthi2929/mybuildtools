@@ -1,0 +1,20 @@
+---
+title: Demo Documentation
+subtitle: Some Subtitle
+author: Parthiban Rajendran (test@test.com)
+subject: "markdown"
+keywords: [books,programming]
+language: en-US
+lof: false
+lof-own-page: false
+toc-own-page: true
+titlepage: true
+titlepage-background: ./docs/assets/background10.pdf
+titlepage-text-color: "333333"
+titlepage-rule-color: "00737C"
+papersize: letter
+colorlinks: true
+book: false
+header-includes: |
+    \usepackage{mhchem}
+---
