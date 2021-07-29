@@ -6,6 +6,23 @@ _Usage:_
 
 Considering a typical project layout, the tools are placed in tools folder, and access the relevant `docs` or `src` example contents, to generate demo outputs, again within tools folder itself. This way, user could replace doc content in `docs` folder with theirs, src content in `src` folder with theirs, and proceed using the tools. 
 
+_Folder Structure:_  
+
+* docs
+  * 01
+  * 02
+  * assets
+  * templates
+  * title.txt
+* src
+  * MEANcore
+* tools
+  * out
+  * dgraph.sh
+  * md2pdf.sh
+* .gitignore
+* README.md
+
 
 ##### md2pdf
 
