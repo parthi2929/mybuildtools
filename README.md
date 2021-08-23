@@ -82,6 +82,11 @@ The image files can be found in `(root folder)/tools/out` folder. Both png and s
 > find -name desktop.ini -delete
 
 
+##### Updates
+
+* `23rd Aug 2021`: 
+  * pandoc fixed a related [bug](https://github.com/jgm/pandoc/issues/7464) so demo updated accordingly. Tabbged image ref now work but with a side effect: captioned ones get centered!
+  * included plantuml support. Install [plantuml filter](https://github.com/timofurrer/pandoc-plantuml-filter) for script to work. This results in `plantuml-images` output folder annoyingly placed in `root` folder.  
 
 
 

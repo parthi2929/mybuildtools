@@ -1,19 +1,19 @@
 ## Images in Lists 
 
-Below one does not work
+Captioned image references amidst list gets centered. 
 
 1. Point 1
 
-    ![image upload failed](assets/image01.png)
+    ![captioned images gets centered](assets/image01.png)
 
     oaingooin
 
 1. Point 2
 1. Point 3
 
-Below tradeoff could be workaround for now. 
+![captioned images gets centered](assets/image01.png)
 
-1. Point 1
+If not captioned,  
 
 ![](assets/image01.png)
 
@@ -22,4 +22,3 @@ oaingooin
 2. Point 2
 1. Point 3
 
-This is a problem in pandoc extension. Please check my bug report [here](https://github.com/jgm/pandoc/issues/7464)

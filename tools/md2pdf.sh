@@ -15,50 +15,52 @@ cd "./"
 pwd
 
 # conversion WITHOUT latex template
-# TESTED 29th July 2021
+# TESTED 23rd Aug 2021
 
-echo "cleaning up old targets.."
-rm -rf $target_wot
-echo "Initiaing conversion without latex template"
-pandoc \
-    --pdf-engine=xelatex \
-    -f markdown+rebase_relative_paths \
-    -o $target_wot \
-    $source1 
-echo "Opening the final doc file.."
-if [ -f "$target_wot" ]; then
-    echo "Opening $target_wt.."
-    start $target_wot
-else 
-    echo "$target_wot does not exist."
-fi
+# echo "cleaning up old targets.."
+# rm -rf $target_wot
+# echo "Initiaing conversion without latex template"
+# pandoc \
+#     --pdf-engine=xelatex \
+#     --filter pandoc-plantuml \
+#     -f markdown+rebase_relative_paths \
+#     -o $target_wot \
+#     $source1 
+# echo "Opening the final doc file.."
+# if [ -f "$target_wot" ]; then
+#     echo "Opening $target_wt.."
+#     start $target_wot
+# else 
+#     echo "$target_wot does not exist."
+# fi
 
 
 
 
 # conversion WITH latex template
-# TESTED 29th July 2021
+# TESTED 23rd Aug 2021
 
-# echo "cleaning up old targets.."
-# rm -rf $target_wt
-# echo "Initiaing conversion with latex template"
-# pandoc \
-#     --pdf-engine=xelatex \
-#     --template=$template1 \
-#     --highlight-style tango \
-#     --toc -N \
-#     --filter pandoc-crossref \
-#     -f markdown+rebase_relative_paths \
-#     --mathjax \
-#     -o $target_wt \
-#     $title1 $source1
-# echo "Opening the final doc file.."
-# if [ -f "$target_wt" ]; then
-#     echo "Opening $target_wt.."
-#     start $target_wt
-# else 
-#     echo "$target_wt does not exist."
-# fi
+echo "cleaning up old targets.."
+rm -rf $target_wt
+echo "Initiaing conversion with latex template"
+pandoc \
+    --pdf-engine=xelatex \
+    --template=$template1 \
+    --highlight-style tango \
+    --toc -N \
+    --filter pandoc-crossref \
+    --filter pandoc-plantuml \
+    -f markdown+rebase_relative_paths \
+    --mathjax \
+    -o $target_wt \
+    $title1 $source1
+echo "Opening the final doc file.."
+if [ -f "$target_wt" ]; then
+    echo "Opening $target_wt.."
+    start $target_wt
+else 
+    echo "$target_wt does not exist."
+fi
 
 
 # clean up intermediate files
